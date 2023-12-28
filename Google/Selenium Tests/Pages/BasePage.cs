@@ -122,7 +122,7 @@ namespace Google.Selenium_Tests.Pages
 
             //configure extent report
             Extent = new ExtentReports();
-            SparkReporter = new ExtentSparkReporter(currdir + "/Reports/extent-report"
+            SparkReporter = new ExtentSparkReporter(currdir + "/Reports/report"
                 + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".html");
 
             Extent.AttachReporter(SparkReporter);
