@@ -1,0 +1,31 @@
+2023-12-28 12:37:32.561 +05:30 [INF] Google Search Test
+2023-12-28 12:37:32.629 +05:30 [INF] ************************************************
+2023-12-28 12:37:32.727 +05:30 [INF] Starting the Google search test
+2023-12-28 12:37:32.730 +05:30 [INF] Opened Google homepage
+2023-12-28 12:37:33.046 +05:30 [INF] Entered search text: hp laptop
+2023-12-28 12:37:36.833 +05:30 [INF] Clicked on the Search button
+2023-12-28 12:37:36.897 +05:30 [ERR] Test failed for Google Search Test. 
+ Exception: 
+   Search results page title does not contain 'hp laptop'
+  Expected: String containing "gg"
+  But was:  "hp laptop - Google Search"
+
+2023-12-28 12:37:36.898 +05:30 [INF] _______________________________________________________
+2023-12-28 12:37:37.609 +05:30 [INF] Starting the Google search test
+2023-12-28 12:37:37.609 +05:30 [INF] Opened Google homepage
+2023-12-28 12:37:37.877 +05:30 [INF] Entered search text: selenium
+2023-12-28 12:37:39.928 +05:30 [INF] Clicked on the Search button
+2023-12-28 12:37:40.097 +05:30 [ERR] Test failed for Google Search Test. 
+ Exception: 
+ Multiple failures or warnings in test:
+  1)   Search results page title does not contain 'hp laptop'
+  Expected: String containing "gg"
+  But was:  "hp laptop - Google Search"
+
+  2)   Search results page title does not contain 'selenium'
+  Expected: String containing "gg"
+  But was:  "selenium - Google Search"
+
+
+2023-12-28 12:37:40.097 +05:30 [INF] _______________________________________________________
+2023-12-28 12:37:41.537 +05:30 [INF] ************************************************
