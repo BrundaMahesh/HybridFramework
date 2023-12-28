@@ -15,8 +15,7 @@ namespace Google.Selenium_Tests.Pages
         private IWebElement? SearchBox => Driver?.FindElement(By.Name("q"));
 
         [CacheLookup]
-        [FindsBy(How = How.Name,Using = "btnK")]
-        private IWebElement? SearchButton { get; set; }
+        private IWebElement? SearchButton => Driver?.FindElement(By.Name("btnK"));
 
         public HomePage(IWebDriver driver):base(driver) { }
 

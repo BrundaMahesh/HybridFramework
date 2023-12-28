@@ -35,8 +35,8 @@
 	<ItemGroup>
 	  <Folder Include="Logs\" />
 	  <Folder Include="Custom Exceptions\" />
-	  <Folder Include="Test Data\" />
 	  <Folder Include="Screenshots\" />
+	  <Folder Include="Test Data\" />
 	  <Folder Include="Reports\" />
 	</ItemGroup>
 
