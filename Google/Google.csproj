@@ -38,7 +38,6 @@
 	  <Folder Include="Test Data\" />
 	  <Folder Include="Screenshots\" />
 	  <Folder Include="Reports\" />
-	  <Folder Include="Selenium Tests\Tests\" />
 	</ItemGroup>
 
 </Project>
