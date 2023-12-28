@@ -128,6 +128,13 @@ namespace Google.Selenium_Tests.Pages
             Extent.AttachReporter(SparkReporter);
         }
 
+        [OneTimeTearDown]
+        public void TearDown()
+        {
+            Driver?.Quit();
+            Extent?.Flush();    
+            Log.CloseAndFlush();
+        }
 
 
     }
