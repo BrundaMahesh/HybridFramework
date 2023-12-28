@@ -84,7 +84,7 @@ namespace Google.Selenium_Tests.Pages
                 Log.Error($"Test failed for {testName}. \n Exception: \n {errorMessage}");
                 Log.Information("_______________________________________________________");
                 var screenshot = ((ITakesScreenshot)Driver).GetScreenshot().AsBase64EncodedString;    
-                Test?.AddScreenCaptureFromBase64String(screenshot);
+                Test?.AddScreenCaptureFromBase64String(screenshot,testName);
                 Test?.Fail(result);
             }
         }
