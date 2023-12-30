@@ -3,6 +3,7 @@ using AventStack.ExtentReports.Reporter;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Support.UI;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -136,6 +137,19 @@ namespace Google.Selenium_Tests.Pages
             Log.CloseAndFlush();
         }
 
+        protected static void WaitForElementToBeClickable(IWebElement? element,string elementName)
+        {
+             if(element != null)
+             {
+                DefaultWait<IWebElement> fluentWait = new DefaultWait<IWebElement>(element);
+                fluentWait.Timeout = TimeSpan.FromSeconds(5);
+                fluentWait.PollingInterval = TimeSpan.FromMilliseconds(150);
+                fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
+                fluentWait.Message = "Element - " + elementName + " - not found or " + "not clickable";
+
+                fluentWait.Until(x=> x != null && x.Displayed && x.Enabled);
+             }
+        }
 
     }
 }
