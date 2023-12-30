@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿using AventStack.ExtentReports;
+using Google.Custom_Exceptions;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.PageObjects;
 using System;
@@ -35,5 +37,23 @@ namespace Google.Selenium_Tests.Pages
             fluentWait.Until(x => x.FindElement(By.Name("btnK")));
             SearchButton?.Click();
         }
+
+        public void SearchTest(string? searchText,string testName,ExtentTest Test)
+        {
+            try
+            {
+                SearchBox?.SendKeys(searchText);
+                LogTestResult(testName, "Info", Test, $"Entered search text: {searchText}");
+                WaitForElementToBeClickable(SearchButton, "Google Search button");
+                SearchButton?.Click();
+
+                LogTestResult(testName, "Info", Test, "Clicked on the Search button");
+            }
+            catch(Exception ex) 
+            {
+               throw new ProjectException(ex.Message); 
+            }
+        }
+
     }
 }

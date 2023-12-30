@@ -67,7 +67,7 @@ namespace Google.Selenium_Tests.Pages
             screenshot.SaveAsFile(filename);
        }
 
-        protected void LogTestResult(string testName, string type,string result, string errorMessage = null)
+        protected void LogTestResult(string testName, string type,ExtentTest Test,string result, string errorMessage = null)
         {
             if (type.ToLower().Equals("info"))
             {
