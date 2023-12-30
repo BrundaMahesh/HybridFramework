@@ -86,7 +86,7 @@ namespace Google.Selenium_Tests.Pages
                 string sspath = TakeScreenShot();
                 Log.Error($"Test failed for {testName}. \n Exception: \n {errorMessage}");
                 Log.Information("_______________________________________________________");    
-                Test?.AddScreenCaptureFromBase64String(sspath,testName);
+                Test?.AddScreenCaptureFromPath(sspath,testName);
                 Test?.Fail(result);
             }
         }

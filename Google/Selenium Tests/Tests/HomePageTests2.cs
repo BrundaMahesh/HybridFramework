@@ -48,7 +48,7 @@ namespace Google.Selenium_Tests.Tests
                 {
                     homePage.SearchTest(searchText, testName, Test);
                     // Assume the title contains the search text for simplicity
-                    Assert.That(Driver.Title, Does.Contain(searchText), $"Search results page title does not contain '{searchText}'");
+                    Assert.That(Driver.Title, Does.Contain("aaa"), $"Search results page title does not contain '{searchText}'");
                     LogTestResult(testName, "Info", Test, "Google search test completed");
                     LogTestResult(testName, "pass", Test, testName + " - Passed");
                 }
